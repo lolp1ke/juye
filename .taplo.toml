@@ -1,0 +1,13 @@
+# SPDX-License-Identifier: Apache-2.0
+
+[formatting]
+reorder_keys = false
+reorder_array = false
+
+[[rule]]
+include = ["**/Cargo.toml"]
+keys = ["dependencies", "workspace.dependencies", "features"]
+
+[rule.formatting]
+reorder_keys = true
+reorder_array = true

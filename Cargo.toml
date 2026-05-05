@@ -1,0 +1,43 @@
+# SPDX-License-Identifier: Apache-2.0
+
+[workspace]
+members = ["arch/arm64", "boot", "kernel"]
+resolver = "3"
+
+[workspace.dependencies]
+arch_arm64 = { path = "arch/arm64", package = "arm64" }
+
+boot = { path = "boot" }
+kernel = { path = "kernel" }
+
+[workspace.lints.clippy]
+std_instead_of_core = "forbid"
+std_instead_of_alloc = "forbid"
+
+allow_attributes = "warn"
+allow_attributes_without_reason = "warn"
+
+[workspace.package]
+authors = ["Alibek<freed.alibek@gmail.com>"]
+
+edition = "2024"
+version = "0.1.0"
+
+description = "Alibek's toy kernel"
+
+homepage = "https://juye.til-lang.org"
+repository = "https://github.com/lolp1ke/juye"
+readme = "README.md"
+license = "Apache-2.0"
+
+rust-version = "1.94.0"
+
+[profile.dev]
+panic = "abort"
+opt-level = 1
+
+[profile.release]
+panic = "abort"
+opt-level = 2
+lto = true
+codegen-units = 1

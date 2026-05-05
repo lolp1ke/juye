@@ -1,0 +1,8 @@
+# SPDX-License-Identifier: Apache-2.0
+
+/target
+/.venv
+
+/Cargo.lock
+**/.DS_Store
+*.log

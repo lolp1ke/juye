@@ -1,0 +1,16 @@
+# SPDX-License-Identifier: Apache-2.0
+
+# currently this config works fine only for qemu's virt machine
+
+[target.aarch64-unknown-none]
+linker = "rust-lld"
+rustflags = ["-C", "link-arg=-Tlinkers/virt.ld", "-C", "no-redzone"]
+
+[build]
+target = "aarch64-unknown-none"
+
+[env]
+RUST_BACKTRACE = "1"
+
+[cargo-new]
+vcs = "none"

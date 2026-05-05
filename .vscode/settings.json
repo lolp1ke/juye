@@ -1,0 +1,13 @@
+/* SPDX-License-Identifier: Apache-2.0 */
+{
+  "rust-analyzer.rustfmt.extraArgs": [
+    "+nightly"
+  ],
+  "rust-analyzer.check.targets": [
+    "aarch64-unknown-none"
+  ],
+  "rust-analyzer.cargo.target": "aarch64-unknown-none",
+  "rust-analyzer.check.allTargets": false,
+  "rust-analyzer.cargo.allTargets": false,
+  "rust-analyzer.check.command": "clippy",
+}
