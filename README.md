@@ -17,7 +17,7 @@
 > [!CAUTION]
 > tested only on macos, no guarantee that kernel code will compile with little tweaks for linux let alone windows machines
 
-### Prerequisites
+### prerequisites
 
 - nightly rust
 ```sh
@@ -37,7 +37,7 @@ brew install qemu
 brew install make
 ```
 
-### Running
+### running
 
 ```sh
 git clone https://github.com/lolp1ke/juye
@@ -46,5 +46,5 @@ make run
 
 more available commands are in [makefile](Makefile).
 
-## License
+## license
 this codebase availble under [Apache-2.0](LICENSE-APACHE)
