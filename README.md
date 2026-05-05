@@ -21,7 +21,8 @@
 
 - nightly rust
 ```sh
-rustup toolchain install nightly-2026-02-03 # development phase started by using this specific version, any later toolchain must be fine to use
+ # development phase started by using this specific version, any later toolchain must be fine to use
+rustup toolchain install nightly-2026-02-03
 ```
 
 - qemu
