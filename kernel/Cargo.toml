@@ -12,7 +12,16 @@ readme.workspace = true
 license.workspace = true
 rust-version.workspace = true
 
+[features]
+default = ["qemu_virt"]
+
+qemu_virt = ["dep:qemu_virt_platform"]
+
 [dependencies]
+hal = { workspace = true }
+kcore = { workspace = true }
+
+qemu_virt_platform = { workspace = true, optional = true }
 
 [lints]
 workspace = true

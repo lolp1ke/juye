@@ -1,14 +1,32 @@
 # SPDX-License-Identifier: Apache-2.0
 
 [workspace]
-members = ["arch/arm64", "boot", "kernel"]
+members = [
+  "arch/arm64",
+  "boot",
+  "drivers/uart",
+  "drivers/virtio",
+  "hal",
+  "kcore",
+  "kernel",
+  "platforms/qemu_virt",
+]
 resolver = "3"
 
 [workspace.dependencies]
 arch_arm64 = { path = "arch/arm64", package = "arm64" }
 
 boot = { path = "boot" }
+hal = { path = "hal" }
+kcore = { path = "kcore" }
 kernel = { path = "kernel" }
+
+uart_driver = { path = "drivers/uart", package = "uart" }
+virtio_driver = { path = "drivers/virtio", package = "virtio" }
+
+qemu_virt_platform = { path = "platforms/qemu_virt", package = "qemu_virt" }
+
+libm = { version = "0.2.16", default-features = false }
 
 [workspace.lints.clippy]
 std_instead_of_core = "forbid"
