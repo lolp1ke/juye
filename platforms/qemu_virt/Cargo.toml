@@ -1,0 +1,21 @@
+# SPDX-License-Identifier: Apache-2.0
+
+[package]
+name = "qemu_virt"
+authors.workspace = true
+edition.workspace = true
+version.workspace = true
+description.workspace = true
+homepage.workspace = true
+repository.workspace = true
+readme.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+hal = { workspace = true }
+
+uart_driver = { workspace = true }
+
+[lints]
+workspace = true
