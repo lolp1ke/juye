@@ -1,0 +1,18 @@
+# SPDX-License-Identifier: Apache-2.0
+
+[package]
+name = "kcore"
+authors.workspace = true
+edition.workspace = true
+version.workspace = true
+description.workspace = true
+homepage.workspace = true
+repository.workspace = true
+readme.workspace = true
+license.workspace = true
+rust-version.workspace = true
+
+[dependencies]
+
+[lints]
+workspace = true
