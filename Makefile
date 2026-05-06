@@ -18,7 +18,9 @@ run: build
 		-cpu cortex-a72 \
 		-m 2G \
 		-smp 4 \
-		-nographic \
+		-device virtio-gpu \
+		-display cocoa \
+		-serial mon:stdio \
 		-kernel $(ELF)
 
 clean:
